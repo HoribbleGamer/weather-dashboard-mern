@@ -1,6 +1,6 @@
 # 🌤️ Full-Stack Weather Dashboard
 
-**Live Application:** [Insert Vercel Link Here] | **API Backend:** [Insert Render Link Here]
+**Live Application:** https://weather-dashboard-mern-cyan.vercel.app | **API Backend:** https://weather-dashboard-mern-5exc.onrender.com
 
 ## 📋 Overview
 A full-stack web application built with the MERN stack (MongoDB, Express, React, Node.js) that provides real-time weather tracking and forecasting. Users can search for global weather data and permanently save their favorite locations to a cloud database. 
