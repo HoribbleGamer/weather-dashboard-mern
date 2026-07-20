@@ -22,23 +22,12 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// ─── CORS Allowed Origins ─────────────────────────────────────────────────────
-// Explicitly list every origin that may send credentialed requests.
-// Add extra entries here if you deploy to a staging/production domain.
-const ALLOWED_ORIGINS = [
-  'http://localhost:5173',  // Vite dev server (default)
-  'http://127.0.0.1:5173', // Vite via loopback
-  ...(process.env.CLIENT_ORIGIN ? [process.env.CLIENT_ORIGIN] : []),
-];
-
+// ─── CORS ─────────────────────────────────────────────────────────────────────
+// Open to all origins for now — tighten to a specific CLIENT_ORIGIN env var
+// once you have a stable production frontend URL.
 app.use(
   cors({
-    origin: (origin, callback) => {
-      // Allow requests with no origin (e.g. curl, Postman, server-to-server)
-      if (!origin) return callback(null, true);
-      if (ALLOWED_ORIGINS.includes(origin)) return callback(null, true);
-      callback(new Error(`CORS policy: origin "${origin}" is not allowed.`));
-    },
+    origin: true,   // reflect the request origin (allows any origin)
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],

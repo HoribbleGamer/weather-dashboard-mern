@@ -5,14 +5,15 @@
  *   Left panel  → search bar + live weather display
  *   Right panel → saved favourite cities sidebar
  *
- * API calls are proxied via Vite dev server to http://localhost:5000
+ * API base URL is driven by VITE_API_URL (set in /client/.env for local dev,
+ * or in Vercel's environment variables for production).
  */
 
 import { useState, useEffect, useCallback, memo } from 'react'
 import axios from 'axios'
 import './App.css'
 
-const API = '/api'
+const API = `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api`
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
