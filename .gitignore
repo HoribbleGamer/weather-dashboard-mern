@@ -1,0 +1,36 @@
+# ─── Dependencies ─────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ─── Environment Variables ────────────────────────────────────
+# All .env variants — NEVER commit secrets
+.env
+.env.local
+.env.*
+.env.*.local
+
+
+# ─── Build Artifacts ─────────────────────────────────────────
+dist/
+build/
+
+# ─── Logs ────────────────────────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── OS / Editor ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ─── Coverage ────────────────────────────────────────────────
+coverage/
