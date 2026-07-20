@@ -19,9 +19,17 @@
 
 /* Animated gradient drift — gives a "living sky" feel */
 @keyframes gradientDrift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .app.bg-default {
@@ -193,7 +201,9 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .loading-text {
@@ -216,8 +226,15 @@
 }
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .error-icon {
@@ -279,13 +296,20 @@
 .empty-state-icon {
   font-size: 5rem;
   line-height: 1;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
   animation: floatIcon 3s ease-in-out infinite;
 }
 
 @keyframes floatIcon {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .empty-state-title {
@@ -310,8 +334,15 @@
 }
 
 @keyframes cardEntrance {
-  from { opacity: 0; transform: translateY(20px) scale(0.97); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Header: city name + icon */
@@ -334,7 +365,7 @@
   color: #fff;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .city-country {
@@ -363,13 +394,20 @@
 .weather-icon {
   width: 100px;
   height: 100px;
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.35));
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.35));
   animation: iconPulse 4s ease-in-out infinite;
 }
 
 @keyframes iconPulse {
-  0%, 100% { transform: scale(1) rotate(0deg); }
-  50%       { transform: scale(1.06) rotate(2deg); }
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.06) rotate(2deg);
+  }
 }
 
 /* Temperature hero */
@@ -385,7 +423,7 @@
   color: #fff;
   line-height: 1;
   letter-spacing: -0.04em;
-  text-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .temp-unit {
@@ -521,7 +559,7 @@
 .temp-range-bar {
   flex: 1;
   height: 6px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
   overflow: hidden;
   position: relative;
@@ -541,7 +579,7 @@
 .temp-range-value {
   font-size: 0.85rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   white-space: nowrap;
 }
 
@@ -565,16 +603,16 @@
 }
 
 .save-btn.primary {
-  background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.12));
-  border: 1px solid rgba(255,255,255,0.35);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.12));
+  border: 1px solid rgba(255, 255, 255, 0.35);
   color: #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .save-btn.primary:hover:not(:disabled) {
-  background: linear-gradient(135deg, rgba(255,255,255,0.35), rgba(255,255,255,0.2));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.2));
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .save-btn.saved {
@@ -604,8 +642,15 @@
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -644,11 +689,11 @@
   justify-content: center;
   width: 22px;
   height: 22px;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   font-size: 0.7rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .favorites-list-scroll {
@@ -693,8 +738,15 @@
 }
 
 @keyframes itemSlideIn {
-  from { opacity: 0; transform: translateX(12px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .favorite-item:hover {
@@ -761,9 +813,9 @@
 /* Sidebar footer - fetched-at timestamp */
 .sidebar-footer {
   padding: 16px 20px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.72rem;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
   letter-spacing: 0.06em;
   text-align: center;
 }
@@ -782,7 +834,7 @@
 .brand {
   font-size: 1.05rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -791,13 +843,22 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
   animation: brandPulse 2s ease-in-out infinite;
 }
 
 @keyframes brandPulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.4; transform: scale(0.7); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
 }
 
 /* ── Responsive ─────────────────────────────────────────────── */
