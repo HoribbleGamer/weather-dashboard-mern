@@ -1,114 +1,53 @@
-# Real-Time Weather Dashboard 🌤️
+# 🌤️ Full-Stack Weather Dashboard
 
-A full-stack real-time weather dashboard built with **React** (Vite), **Node.js/Express**, and **MongoDB**.
+**Live Application:** [Insert Vercel Link Here] | **API Backend:** [Insert Render Link Here]
 
----
+## 📋 Overview
+A full-stack web application built with the MERN stack (MongoDB, Express, React, Node.js) that provides real-time weather tracking and forecasting. Users can search for global weather data and permanently save their favorite locations to a cloud database. 
 
-## 📁 Project Structure
+This project demonstrates strong architectural principles, RESTful API design, and secure handling of third-party integrations.
 
-```
-weather-dashboard/
-├── client/                   # React frontend (Vite)
-│   ├── public/
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   ├── index.html
-│   ├── vite.config.js
-│   └── package.json
-│
-├── server/                   # Node.js/Express backend
-│   ├── routes/               # (coming soon)
-│   ├── models/               # (coming soon)
-│   ├── controllers/          # (coming soon)
-│   ├── middleware/           # (coming soon)
-│   ├── .env                  # ⚠️ Not committed to git
-│   ├── server.js             # Entry point
-│   └── package.json
-│
-├── .gitignore
-└── README.md
-```
+## 🔒 Security & Architecture Highlights
+* **Credential Hygiene:** Implemented strict environment variable (`.env`) protocols and `.gitignore` configurations across both client and server environments to prevent API key and database credential leakage.
+* **Network Communication:** Configured Cross-Origin Resource Sharing (CORS) to safely route RESTful API traffic between the decoupled Vite/React frontend and the Node.js backend.
+* **Data Persistence:** Utilized MongoDB Atlas for secure, cloud-based storage of user-specific data arrays.
+* **Performance Optimization:** Built with React hooks (`useEffect`, `useState`) and optimized CSS rendering paths to minimize main-thread blocking and ensure smooth cross-browser performance (Edge, Firefox, Chrome).
 
----
+## 💻 Tech Stack
+* **Frontend:** React, Vite, CSS3 (Hardware-accelerated animations)
+* **Backend:** Node.js, Express.js
+* **Database:** MongoDB Atlas, Mongoose
+* **External APIs:** OpenWeatherMap API
+* **Deployment:** Vercel (Frontend), Render (Backend)
 
-## 🚀 Getting Started
+## 🚀 Core Features
+* **Live Weather Engine:** Fetches and processes real-time meteorological data asynchronously.
+* **Dynamic UI:** Interface adapts fluidly based on incoming data states without requiring full-page reloads.
+* **Persistent Favorites:** Integrates full CRUD operations to store and retrieve favorited cities from the cloud database.
 
-### Prerequisites
-- Node.js >= 18
-- MongoDB Atlas account (or local MongoDB instance)
-- OpenWeatherMap API key — [Get one free](https://openweathermap.org/api)
+## 🛠️ Local Installation & Setup
 
----
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/weather-dashboard-mern.git
+   cd weather-dashboard-mern
+   ```
 
-### 1. Backend Setup
+2. **Set up environment variables:**
+   * Create a `.env` file in the `/server` directory:
+     ```
+     PORT=5000
+     MONGO_URI=your_mongodb_connection_string
+     OPENWEATHER_API_KEY=your_openweather_api_key
+     ```
+   * Create a `.env` file in the `/client` directory:
+     ```
+     VITE_API_URL=http://localhost:5000
+     ```
 
-```bash
-cd server
-npm install
-```
-
-Edit `server/.env` and fill in your credentials:
-
-```env
-MONGO_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/weather-dashboard
-OPENWEATHER_API_KEY=your_api_key_here
-PORT=5000
-NODE_ENV=development
-```
-
-Start the dev server (with auto-reload via nodemon):
-
-```bash
-npm run dev
-```
-
-The API will be available at `http://localhost:5000`.
-
----
-
-### 2. Frontend Setup
-
-```bash
-cd client
-npm install
-npm run dev
-```
-
-The React app will be available at `http://localhost:5173`.
-
----
-
-## 🛠️ Tech Stack
-
-| Layer     | Technology                            |
-|-----------|---------------------------------------|
-| Frontend  | React 18, Vite, CSS                   |
-| Backend   | Node.js, Express 5                    |
-| Database  | MongoDB + Mongoose                    |
-| Weather   | OpenWeatherMap API (via Axios)        |
-| Dev Tools | nodemon, dotenv, cors                 |
-
----
-
-## 📡 API Endpoints
-
-| Method | Endpoint               | Description                     |
-|--------|------------------------|---------------------------------|
-| GET    | `/`                    | Health check                    |
-| GET    | `/api/weather/:city`   | *(coming soon)* Current weather |
-| GET    | `/api/weather/forecast`| *(coming soon)* 5-day forecast  |
-
----
-
-## 🔐 Environment Variables
-
-| Variable              | Description                        |
-|-----------------------|------------------------------------|
-| `MONGO_URI`           | MongoDB connection string          |
-| `OPENWEATHER_API_KEY` | OpenWeatherMap API key             |
-| `PORT`                | Express server port (default 5000) |
-| `NODE_ENV`            | `development` / `production`       |
-
----
+3. **Install dependencies and run:**
+   ```bash
+   npm install
+   npm run dev
+   ```
+   *(Ensure you have the `concurrently` package configured in the root directory to launch both client and server simultaneously).*
